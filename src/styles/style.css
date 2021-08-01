@@ -1,0 +1,508 @@
+@import url('fonts/fonts.css');
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+.bold {
+  font-family: 'SegoeUIB', sans-serif;
+}
+h1 {
+  font-size: 65px !important;
+}
+h2 {
+  font-size: 35px !important;
+}
+h3 {
+  font-size: 25px !important;
+}
+h4 {
+  font-size: 30px !important;
+}
+p {
+  font-size: 18px !important;
+}
+.p-lg {
+  font-size: 20px !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.wrapper {
+  width: 100%;
+}
+.sidebar {
+  width: 265px;
+  height: 100vh;
+  position: fixed;
+  transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out,
+    margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+  background: #153a84;
+  margin-top: 0;
+  margin: 10px;
+  border-radius: 15px;
+  z-index: 2;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+.sidebar a {
+  color: white;
+  font-weight: 500;
+  display: block;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+ul li {
+  list-style: none;
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+/* .bg-me1 {
+  background-color: #0F449A;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+} */
+.main-body {
+  margin-left: 265px;
+  padding: 1px 20px 0 20px;
+}
+.sidebar-toggle {
+  display: none;
+}
+.sidebar ul li a {
+  color: white !important;
+}
+.sidebar-toggle i {
+  color: #153a84 !important;
+  font-size: 20px;
+}
+.sidebar ul a:hover,
+.sidebar ul a.active {
+  background-color: #093c88 !important;
+}
+.sidebar ul li a:hover {
+  color: white !important;
+  text-decoration: none;
+}
+.lh-0 {
+  line-height: 1;
+}
+.sidebar h4 {
+  margin-left: 40px;
+}
+.sidebar ul.top-streamers {
+  padding-left: 40px;
+}
+.ss-scroll {
+  background: #093c88;
+  width: 6px;
+}
+.ss-content {
+  width: calc(100% + 20px);
+}
+table tr {
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgb(0 0 0 / 16%);
+  border: none !important;
+}
+
+table.table {
+  border-spacing: 20px;
+  border-collapse: separate !important;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.table td,
+.table th {
+  border: none !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+tbody tr td {
+  color: #999999;
+  font-weight: 600;
+}
+.site-btn {
+  background: #153a84;
+  border: 1px solid #153a84;
+  color: white !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  transition: ease-in-out 0.2s;
+  border-radius: 15px;
+}
+.site-btn:hover,
+.border-btn {
+  background: white;
+  color: #153a84 !important;
+}
+.border-btn:hover {
+  background: #153a84;
+  color: white !important;
+}
+.pilled-btn {
+  border-radius: 50px !important;
+  filter: drop-shadow(0px 3px 15px rgba(67, 109, 194, 0.561));
+}
+header {
+  box-shadow: 0 0 5px rgb(0 0 0 / 16%);
+  padding: 15px 0;
+}
+.nav-linkss a {
+  color: black !important;
+}
+a {
+  text-decoration: none !important;
+}
+.nav-linkss li.active a,
+.nav-linkss a:hover {
+  color: #153a84 !important;
+}
+.banner {
+  background: url('../images/banner-bg.png') no-repeat;
+  background-position-x: right;
+  padding: 80px 0;
+}
+.get-mortgage {
+  padding: 80px 0;
+}
+.mortgage-card {
+  padding: 40px 15px;
+  border-bottom: 5px solid white;
+  border-radius: 25px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+.mortgage-card:hover {
+  border-bottom: 5px solid #153a84;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.16);
+}
+.mortgage-icon {
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.16);
+  width: 75px;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mortgage-card:hover .mortgage-icon {
+  background-color: #527dd2;
+}
+.mortgage-card:hover .mortgage-icon svg path {
+  fill: white !important;
+  stroke: white !important;
+}
+.mortgage-icon {
+  padding: 10px;
+  border-radius: 10px;
+}
+.grey-text {
+  color: #666666;
+}
+.calculator-inner {
+  background: #f3f7ff;
+  border-radius: 30px;
+  padding: 80px 30px;
+}
+.l-blue-text {
+  color: #527dd2;
+}
+.blue-text {
+  color: #153a84;
+}
+input[type='range'] {
+  height: 2px;
+  width: 100%;
+}
+.input-tagg input,
+.input-tagg span {
+  background: transparent;
+  font-size: 21px;
+  font-family: 'SegoeUIB', sans-serif;
+}
+.input-tagg input {
+  color: #153a84;
+}
+.input-tagg span {
+  color: black !important;
+}
+.mortgage-calc-card {
+  background: url('../images/mortgage-card.png') no-repeat;
+  background-size: cover;
+  height: 100%;
+  border-radius: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.mortgage-calc-card h2 {
+  -webkit-text-stroke: 1px #153a84;
+}
+.blue-pilled {
+  background: #1b1d22;
+  border-radius: 50px;
+  color: white !important;
+  font-family: 'SegoeUIB', sans-serif;
+  border: 1px solid #1b1d22;
+  filter: drop-shadow(0px 3px 15px rgba(48, 51, 57, 0.557));
+}
+.blue-pilled:hover {
+  background: transparent;
+  color: #1b1d22 !important;
+}
+.mortgage-calc-card .blue-pilled {
+  position: absolute;
+  bottom: 40px;
+}
+.d-grey-text {
+  color: #1b1d22;
+}
+.eligibility-card {
+  background-color: white;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.16);
+  border-radius: 30px;
+  position: relative;
+}
+.eligibility-card ul li,
+.create-card ul li {
+  list-style: url('../images/list-arrow.png');
+}
+.create-card ul li ul li {
+  list-style: disc;
+}
+.eligibility-card ul li {
+  font-size: 18px;
+  color: #1b1d22;
+}
+.bottom-btn {
+  position: absolute;
+  bottom: 50px;
+}
+.p-sm {
+  font-size: 14px;
+}
+.fees-img {
+  position: absolute;
+  top: -140px;
+  right: 0;
+}
+footer a {
+  color: #333333;
+}
+.breadcrumb {
+  background: transparent;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+}
+.breadcrumb-item {
+  color: #153a84 !important;
+}
+.listing-inner {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  padding: 30px 20px;
+}
+.listing .carousel-control-next-icon {
+  background-image: url('../images/arrow-right.png');
+  width: 60px;
+  height: 60px;
+  opacity: 1 !important;
+}
+.listing .carousel-control-prev-icon {
+  background-image: url('../images/arrow-left.png');
+  width: 60px;
+  height: 60px;
+  opacity: 1 !important;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1 !important;
+}
+.black-tag {
+  background: #1f1f1f;
+  opacity: 0.5;
+  backdrop-filter: blur(15px);
+  width: 190px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: white;
+}
+.sm-tag {
+  width: 57px;
+}
+.green-tag {
+  width: 87px;
+  height: 31px;
+  background: #4caf50;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.listing-carousel-inner {
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+}
+.p-xs {
+  font-size: 12px;
+  color: #999999;
+}
+.listing-inner input,
+.listing-inner select,
+.step-two input,
+.step-two select,
+.modal-input {
+  background: rgba(27, 29, 34, 0.05);
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 20px;
+}
+.listing-inner select,
+.step-two select {
+  appearance: none;
+  background: url('../images/arrow-down.png') no-repeat 95% 50%,
+    rgba(27, 29, 34, 0.05);
+}
+.body-bg {
+  background: url('../images/body-bg.png') no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+.inner-page {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  padding: 30px 20px 60px 20px;
+}
+.inner-page header {
+  box-shadow: none !important;
+}
+.create-card {
+  border: 0.5px solid #cccccc;
+  border-radius: 15px;
+}
+.site-input {
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+}
+.left-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.right-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.social-link {
+  display: block;
+  background: #f3f7ff;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+}
+.house-select {
+  border-radius: 20px !important;
+}
+.grey-btn {
+  background: #1b1d22;
+  opacity: 0.3;
+  border-radius: 50px;
+  color: white !important;
+  border: 1px solid #1b1d22;
+}
+.grey-btn:hover {
+  background: transparent;
+  color: #1b1d22 !important;
+}
+.listing-inner input[type='checkbox'],
+.step-two input[type='checkbox'],
+.listing-inner input[type='radio'],
+.step-two input[type='radio'] {
+  background: unset;
+  border: unset;
+  border-radius: unset;
+  width: auto !important;
+  padding: 0;
+}
+.upload-file {
+  padding: 5px 15px;
+  border: 1px dashed #527dd2;
+  border-radius: 6px;
+  color: #527dd2;
+  cursor: pointer;
+}
+.delete-btn {
+  background-color: #f15642;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #f15642;
+}
+.text-italic {
+  font-style: italic;
+}
+.modal-content.admin-modal {
+  padding: 40px;
+}
+.l-blue-bg {
+  background: #f3f7ff;
+}
+.transparent-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.avatar {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 100%;
+}
+.navbar-light .navbar-toggler {
+  color: #153a84 !important;
+  border: none !important;
+}
+.navbar-toggler span {
+  background-image: none !important;
+}
+.bg-white {
+  background: white;
+  box-shadow: 0px 4px 15px #e7efff;
+  border-radius: 15px;
+}
