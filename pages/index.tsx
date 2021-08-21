@@ -1,7 +1,13 @@
 import Head from "next/head";
 import Nav from "../components/nav";
+import React from "react";
 import Footer from "../components/footer";
 export default function Home(): JSX.Element {
+  const [slider, setslider] = React.useState("50");
+  const [downpayment, setdownpayment] = React.useState("N 3,000,000");
+  const [lengthloan, setlengthloan] = React.useState("5");
+  const [lengthrate, setlengthrate] = React.useState("5");
+
   return (
     <div>
       <Head>
@@ -165,8 +171,8 @@ export default function Home(): JSX.Element {
                         type="range"
                         min="1"
                         max="100"
-                        value="50"
-                        onChange={(e) => console.log(e.currentTarget.value)}
+                        value={slider}
+                        onChange={(e) => setslider(e.currentTarget.value)}
                       />
                     </div>
                     <div className="d-flex align-items-center justify-content-between">
@@ -186,10 +192,10 @@ export default function Home(): JSX.Element {
                       <input
                         type="text"
                         className="form-control"
-                        value="N 3,000,000"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
-                        onChange={(e) => console.log(e.currentTarget.value)}
+                        value={downpayment}
+                        onChange={(e) => setdownpayment(e.currentTarget.value)}
                       />
                       <div className="input-group-append">
                         <span className="input-group-text" id="basic-addon2">
@@ -202,10 +208,10 @@ export default function Home(): JSX.Element {
                       <input
                         type="text"
                         className="form-control"
-                        value="5"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
-                        onChange={(e) => console.log(e.currentTarget.value)}
+                        value={lengthloan}
+                        onChange={(e) => setlengthloan(e.currentTarget.value)}
                       />
                       <div className="input-group-append">
                         <span className="input-group-text" id="basic-addon2">
@@ -217,10 +223,10 @@ export default function Home(): JSX.Element {
                     <p className="p-lg mt-1 mb-1">FMBN rate is 6%. PMB rates are between 18 to 24%</p>
                     <div className="input-group w-50 mt-2 input-tagg mb-3">
                       <input
-                        type="text"
+                        type="number"
                         className="form-control"
-                        value="5"
-                        onChange={(e) => console.log(e.currentTarget.value)}
+                        value={lengthrate}
+                        onChange={(e) => setlengthrate(e.currentTarget.value)}
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
                       />

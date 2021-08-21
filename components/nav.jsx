@@ -1,5 +1,17 @@
 import React from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useMediaQuery } from "react-responsive";
+
 export default () => {
+  const [shownav, setshownav] = React.useState(false);
+  const isBigScreen = useMediaQuery({
+    query: "(min-width: 992px)",
+  });
+  React.useEffect(() => {
+    if (isBigScreen) {
+      setshownav(false);
+    }
+  });
   return (
     <header>
       <div className="container-fluid">
@@ -17,10 +29,11 @@ export default () => {
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
+                onClick={() => setshownav(!shownav)}
               >
-                <span className="navbar-toggler-icon"></span>
+                <AiOutlineMenu />
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
+              <div className={`collapse navbar-collapse ${shownav == true ? "show" : ""}`} id="navbarNav">
                 <ul className="navbar-nav nav-linkss ml-auto">
                   <li className="nav-item active">
                     <a className="nav-link mx-lg-2" href="/listing">
@@ -55,7 +68,7 @@ export default () => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link site-btn border-btn px-4 py-2" href="/login">
+                    <a className="nav-link site-btn border-btn px-4 py-2 nav-log-btn" href="/login">
                       Login
                     </a>
                   </li>

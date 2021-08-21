@@ -4,7 +4,25 @@ import Footer from "../../components/footer";
 import Stepper from "react-stepper-horizontal";
 import { Modal } from "react-bootstrap";
 import { FaSearch, FaTrashAlt } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
+import { useDropzone } from "react-dropzone";
+
 const Steps = ({ step, handleFor }) => {
+  const [optionSelect, setoptionSelect] = React.useState(0);
+  const onDrop = React.useCallback((acceptedFiles) => {
+    alert();
+    // Do something with the files
+  }, []);
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const [showModal, setShow] = React.useState(false);
+  const handleClose = () => {
+    setShow(false);
+  };
+  const handleShow = () => {
+    setShow(true);
+  };
+  const [select, setSelect] = React.useState(0);
+
   switch (step) {
     case 11: {
       return (
@@ -33,25 +51,47 @@ const Steps = ({ step, handleFor }) => {
                       <div className="row mt-4 text-center">
                         <div className="col-lg-6 mt-3">
                           <img src="/images/house-1.png" alt="" className="img-fluid" />
-                          <label className="p-3 rounded border mt-3 house-select house-select-active d-block">
+                          <label
+                            onClick={() => setoptionSelect(1)}
+                            className={`${
+                              optionSelect == 1 ? "house-select-active" : ""
+                            } p-3 rounded border mt-3 house-select  d-block`}
+                          >
                             I’ve selected a Homer homes
                           </label>
-                          <input type="radio" id="house-1" className="d-block mx-auto mt-3" name="house-select" />
+                          <input
+                            checked={optionSelect == 1 ? true : false}
+                            onClick={() => setoptionSelect(1)}
+                            type="radio"
+                            id="house-1"
+                            className="d-block mx-auto mt-3"
+                            name="house-select"
+                          />
                         </div>
                         <div className="col-lg-6 mt-3">
                           <img src="/images/house-2.png" alt="" className="img-fluid" />
-                          <label className="p-3 rounded border mt-3 house-select d-block">
+                          <label
+                            onClick={() => setoptionSelect(2)}
+                            className={`
+                            ${optionSelect == 2 ? "house-select-active" : ""}
+                          p-3 rounded border mt-3 house-select d-block`}
+                          >
                             I’ll enter details of the home I want
                           </label>
-                          <input type="radio" id="house-2" className="d-block mx-auto mt-3" name="house-select" />
+                          <input
+                            checked={optionSelect == 2 ? true : false}
+                            onClick={() => setoptionSelect(2)}
+                            type="radio"
+                            id="house-2"
+                            className="d-block mx-auto mt-3"
+                            name="house-select"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="d-flex mt-4 justify-content-center">
-                    <a href="/" className="site-btn mt-3 grey-btn px-5 py-3 mr-4">
-                      Back
-                    </a>
+                    <button className="site-btn mt-3 grey-btn px-5 py-3 mr-4">Back</button>
                     <a onClick={() => handleFor(12)} className="site-btn mt-3 pilled-btn px-5 py-3">
                       Next
                     </a>
@@ -411,11 +451,11 @@ const Steps = ({ step, handleFor }) => {
                         <input type="text" placeholder="Address" />
                       </div>
                       <div className="col-12 mt-4">
-                        <label for="uploadutility" className="upload-file">
+                        <label {...getRootProps()} for="uploadutility" className="upload-file">
                           <i className="fas fa-upload mr-2"></i>Upload Utility Bill Copy Now
                         </label>
                         <div className="d-none">
-                          <input type="file" name="" id="uploadutility" />
+                          <input {...getRootProps()} type="file" name="" id="uploadutility" />
                         </div>
                       </div>
                       <div className="col-lg-6 mt-3">
@@ -451,9 +491,6 @@ const Steps = ({ step, handleFor }) => {
     }
 
     case 31: {
-      const [show, setShow] = React.useState(false);
-      const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
       return (
         <>
           <section className="create-account step-two">
@@ -486,7 +523,7 @@ const Steps = ({ step, handleFor }) => {
                           <input type="text" placeholder="IBAN or  Account number" />
                         </div>
                         <div className="col-lg-6 mt-4">
-                          <div className="green-tag w-100 h-auto py-3" onClick={handleShow}>
+                          <div className="green-tag w-100 h-auto py-3" onClick={() => handleShow()}>
                             <svg
                               className="mr-3"
                               width="24"
@@ -565,12 +602,17 @@ const Steps = ({ step, handleFor }) => {
                             OR
                           </label>
                         </div>
+
                         <div className="col-12 mt-4">
-                          <label for="uploadstatement" className="upload-file d-block w-100 py-3 text-center">
+                          <label
+                            {...getRootProps()}
+                            for="uploadstatement"
+                            className="upload-file d-block w-100 py-3 text-center"
+                          >
                             <i className="fas fa-upload mr-2"></i>Upload you six months bank statement with Account Seal
                           </label>
                           <div className="d-none">
-                            <input type="file" name="" id="uploadstatement" />
+                            <input {...getInputProps()} type="file" name="" id="uploadstatement" />
                           </div>
                         </div>
                         <div className="col-12 mt-3">
@@ -599,7 +641,7 @@ const Steps = ({ step, handleFor }) => {
             </div>
           </section>
 
-          <Modal size="lg" show={show} onHide={handleClose}>
+          <Modal size="lg" show={showModal} onHide={handleClose}>
             <div className="" role="document">
               <div className="admin-modal">
                 <div className="text-center">
@@ -665,7 +707,6 @@ const Steps = ({ step, handleFor }) => {
     }
 
     case 41: {
-      const [select, setSelect] = React.useState(0);
       return (
         <>
           <section className="create-account step-two">
@@ -747,19 +788,27 @@ const Steps = ({ step, handleFor }) => {
                               <input type="text" placeholder="Role" />
                             </div>
                             <div className="col-12 mt-4">
-                              <label for="uploadletter" className="upload-file d-block w-100 py-3 text-center">
+                              <label
+                                {...getRootProps()}
+                                for="uploadletter"
+                                className="upload-file d-block w-100 py-3 text-center"
+                              >
                                 <i className="fas fa-upload mr-2"></i>Upload Letter of Employment or Promotion Letter
                               </label>
                               <div className="d-none">
-                                <input type="file" name="" id="uploadletter" />
+                                <input {...getRootProps()} type="file" name="" id="uploadletter" />
                               </div>
                             </div>
                             <div className="col-12 mt-4">
-                              <label for="uploadslip" className="upload-file d-block w-100 py-3 text-center">
+                              <label
+                                {...getRootProps()}
+                                for="uploadslip"
+                                className="upload-file d-block w-100 py-3 text-center"
+                              >
                                 <i className="fas fa-upload mr-2"></i>Upload Last Payslip
                               </label>
                               <div className="d-none">
-                                <input type="file" name="" id="uploadslip" />
+                                <input {...getRootProps()} type="file" name="" id="uploadslip" />
                               </div>
                             </div>
                             <div className="col-12 mt-4 text-center">
@@ -862,11 +911,15 @@ const Steps = ({ step, handleFor }) => {
                                 <p className="green-tag red-tag">Not Uploaded</p>
                               </td>
                               <td>
-                                <label for="uploadcac" className="upload-file px-4 py-2 text-center">
+                                <label
+                                  {...getRootProps()}
+                                  for="uploadcac"
+                                  className="upload-file px-4 py-2 text-center"
+                                >
                                   <i className="fas fa-upload mr-2"></i>Upload
                                 </label>
                                 <div className="d-none">
-                                  <input type="file" name="" id="uploadcac" />
+                                  <input {...getRootProps()} type="file" name="" id="uploadcac" />
                                 </div>
                               </td>
                             </tr>
@@ -908,6 +961,9 @@ export default () => {
       return 3;
     }
   };
+  const isMobile = useMediaQuery({
+    query: "(max-width: 575px)",
+  });
 
   return (
     <div className="body-bg">
@@ -915,14 +971,18 @@ export default () => {
         <Nav />
         <div className="stepper">
           <Stepper
-            steps={[
-              { title: "Home" },
-              { title: "Your Personal Details" },
-              { title: "Financial Details" },
-              { title: "Employment Details" },
-              { title: "Offers" },
-              { title: "Loan Process / Disbursement" },
-            ]}
+            steps={
+              !isMobile
+                ? [
+                    { title: "Home" },
+                    { title: "Your Personal Details" },
+                    { title: "Financial Details" },
+                    { title: "Employment Details" },
+                    { title: "Offers" },
+                    { title: "Loan Process / Disbursement" },
+                  ]
+                : [{ title: "" }, { title: "" }, { title: "" }, { title: "" }, { title: "" }, { title: "" }]
+            }
             size={35}
             circleFontSize={12}
             titleFontSize={12}

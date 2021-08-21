@@ -7,6 +7,15 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .nav-log-btn {
+    margin-top: 10px;
+  }
+  .listing-inner-dsb {
+    display: none;
+  }
+  .listing-inner-dsb-none {
+    display: initial;
+  }
   .bottom-btn,
   .mortgage-calc-card .blue-pilled {
     position: static;
@@ -117,5 +126,8 @@
   }
   .calculator-inner {
     padding: 35px 20px;
+  }
+  .stepper a {
+    /* display: none; */
   }
 }

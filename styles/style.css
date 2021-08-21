@@ -212,6 +212,9 @@ a {
 .grey-text {
   color: #666666;
 }
+.calculator-inner .input-group {
+  background-color: white;
+}
 .calculator-inner {
   background: #f3f7ff;
   border-radius: 30px;
@@ -312,26 +315,35 @@ footer a {
 .breadcrumb-item {
   color: #153a84 !important;
 }
+.listing-inner-dsb-none {
+  display: none;
+}
+
+.listing-inner input,
+.listing-inner select,
+.create-account input,
+.create-account select {
+  background: rgb(239 239 239 / 5%) !important;
+}
 .listing-inner {
   background: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
   padding: 30px 20px;
 }
-.listing .carousel-control-next-icon {
-  background-image: url("../images/arrow-right.png");
-  width: 60px;
-  height: 60px;
-  opacity: 1 !important;
-}
-.listing .carousel-control-prev-icon {
+.listing .carousel-control-next-icon,
+.carousel .control-prev.control-arrow:before {
   background-image: url("../images/arrow-left.png");
   width: 60px;
   height: 60px;
   opacity: 1 !important;
 }
+
 .carousel-control-next,
-.carousel-control-prev {
+.carousel .control-next.control-arrow:before {
+  background-image: url("../images/arrow-right.png");
+  width: 60px;
+  height: 60px;
   opacity: 1 !important;
 }
 .black-tag {
@@ -441,8 +453,10 @@ footer a {
 }
 .house-select {
   border-radius: 20px !important;
+  cursor: pointer;
 }
-.house-select-active {
+.house-select-active,
+.house-select:hover {
   background: linear-gradient(180deg, #527dd2 0%, #3163c5 100%);
   border-radius: 10px !important;
   color: white;
@@ -619,4 +633,18 @@ thead tr th {
 }
 
 .step1-top {
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 1 !important;
+}
+
+.carousel .control-prev.control-arrow:before,
+.carousel .control-next.control-arrow:before {
+  border: none !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background-color: transparent !important;
 }

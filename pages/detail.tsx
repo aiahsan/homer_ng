@@ -1,7 +1,12 @@
 import React from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 export default () => {
+  const [activeTab, setactiveTab] = React.useState(0);
+
   return (
     <>
       <Nav />
@@ -32,120 +37,296 @@ export default () => {
                       <i className="far fa-heart p-lg"></i>
                     </div>
                     <div id="carouselExampleControls" className="carousel slide mt-4" data-ride="carousel">
-                      <div className="carousel-inner">
-                        <div className="carousel-item active position-relative">
-                          <img src="images/listing-img.png" className="w-100" alt="..." />
-                          <div className="listing-carousel-inner">
-                            <div className="black-tag">Click Here for Full View</div>
-                            <div className="d-flex">
-                              <div className="black-tag mr-2 sm-tag">
-                                <i className="fas fa-camera p-lg mr-2"></i>
-                                12
+                      <Carousel>
+                        <div className="carousel-inner">
+                          <div className="carousel-item active position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
-                              <div className="green-tag">
-                                <i className="mr-2">
-                                  <svg
-                                    width="14"
-                                    height="17"
-                                    viewBox="0 0 14 17"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
-                                      fill="white"
-                                    />
-                                  </svg>
-                                </i>
-                                Verified
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="carousel-item position-relative">
-                          <img src="images/listing-img.png" className="w-100" alt="..." />
-                          <div className="listing-carousel-inner">
-                            <div className="black-tag">Click Here for Full View</div>
-                            <div className="d-flex">
-                              <div className="black-tag mr-2 sm-tag">
-                                <i className="fas fa-camera p-lg mr-2"></i>
-                                12
+                        <div className="carousel-inner">
+                          <div className="carousel-item active position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
-                              <div className="green-tag">
-                                <i className="mr-2">
-                                  <svg
-                                    width="14"
-                                    height="17"
-                                    viewBox="0 0 14 17"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
-                                      fill="white"
-                                    />
-                                  </svg>
-                                </i>
-                                Verified
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="carousel-item position-relative">
-                          <img src="images/listing-img.png" className="w-100" alt="..." />
-                          <div className="listing-carousel-inner">
-                            <div className="black-tag">Click Here for Full View</div>
-                            <div className="d-flex">
-                              <div className="black-tag mr-2 sm-tag">
-                                <i className="fas fa-camera p-lg mr-2"></i>
-                                12
+
+                        <div className="carousel-inner">
+                          <div className="carousel-item active position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
-                              <div className="green-tag">
-                                <i className="mr-2">
-                                  <svg
-                                    width="14"
-                                    height="17"
-                                    viewBox="0 0 14 17"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
-                                      fill="white"
-                                    />
-                                  </svg>
-                                </i>
-                                Verified
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="carousel-item position-relative">
+                            <img src="images/listing-img.png" className="w-100" alt="..." />
+                            <div className="listing-carousel-inner">
+                              <div className="black-tag">Click Here for Full View</div>
+                              <div className="d-flex">
+                                <div className="black-tag mr-2 sm-tag">
+                                  <i className="fas fa-camera p-lg mr-2"></i>
+                                  12
+                                </div>
+                                <div className="green-tag">
+                                  <i className="mr-2">
+                                    <svg
+                                      width="14"
+                                      height="17"
+                                      viewBox="0 0 14 17"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.28117 0.04725L13.4062 2.13092C13.762 2.25108 14 2.58358 14 2.95925V7.64692C14 13.3683 7.61367 16.1484 7.34183 16.2651C7.12133 16.3584 6.8775 16.3584 6.65817 16.2651C6.38633 16.1496 0 13.3683 0 7.64692V2.95925C0 2.58358 0.238 2.25108 0.593833 2.13092L6.71883 0.04725C6.90083 -0.01575 7.09917 -0.01575 7.28117 0.04725ZM7.62533 10.6383L10.8337 6.55492C11.2327 6.04858 11.144 5.31475 10.6377 4.91808C10.1302 4.51908 9.3975 4.60892 8.99967 5.11525L6.54383 8.24075L5.42617 7.28292C4.9385 6.86408 4.20117 6.92008 3.78233 7.40892C3.36117 7.89775 3.41833 8.63509 3.90833 9.05392L5.95 10.8039C6.45167 11.2356 7.21583 11.1598 7.62533 10.6383Z"
+                                        fill="white"
+                                      />
+                                    </svg>
+                                  </i>
+                                  Verified
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <a
-                        className="carousel-control-prev"
-                        href="#carouselExampleControls"
-                        role="button"
-                        data-slide="prev"
-                      >
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                      </a>
-                      <a
-                        className="carousel-control-next"
-                        href="#carouselExampleControls"
-                        role="button"
-                        data-slide="next"
-                      >
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                      </a>
+                      </Carousel>
                     </div>
+
                     <div className="details p-3">
                       <div className="row text-center">
                         <div className="col-lg-3 py-2 border-right">
@@ -272,6 +453,7 @@ export default () => {
                               role="tab"
                               aria-controls="pills-home"
                               aria-selected="true"
+                              onClick={() => setactiveTab(0)}
                             >
                               Details
                             </a>
@@ -285,6 +467,7 @@ export default () => {
                               role="tab"
                               aria-controls="pills-profile"
                               aria-selected="false"
+                              onClick={() => setactiveTab(2)}
                             >
                               Video
                             </a>
@@ -298,6 +481,7 @@ export default () => {
                               role="tab"
                               aria-controls="pills-contact"
                               aria-selected="false"
+                              onClick={() => setactiveTab(1)}
                             >
                               Map
                             </a>
@@ -310,42 +494,64 @@ export default () => {
                             role="tabpanel"
                             aria-labelledby="pills-home-tab"
                           >
-                            <div className="details px-3 py-4">
-                              <p className="bold mb-1">Description</p>
-                              <p className="grey-text mb-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa, porta auctor pretium
-                                dictumst non a. Adipiscing tortor ornare facilisis metus quis arcu dictum. Pulvinar nec,
-                                duis gravida malesuada dis vel eget neque elementum. Varius amet sem sit nulla nunc. Nam
-                                vel eget sodales tincidunt turpis pharetra volutpat nulla. Vulputate malesuada eu tellus
-                                gravida varius et nulla tincidunt. Nulla pretium commodo faucibus leo sed nibh.
-                                Scelerisque scelerisque faucibus urna enim in vel tincidunt tristique nunc. Nisl mauris
-                                auctor id sagittis aenean vestibulum. Est magnis sit egestas elementum lorem id.
-                                Vulputate ultricies vulputate sed vel tempor aliquet lacus. Sed pulvinar turpis non
-                                sollicitudin leo. Vestibulum, bibendum urna viverra proin nibh ullamcorper. Elementum
-                                amet, ac risus elementum sagittis. Massa arcu cursus nisi nulla tincidunt. Phasellus
-                                netus egestas dolor, aliquet scelerisque nec. Ullamcorper risus sapien, in leo tincidunt
-                                sed. Purus imperdiet erat mi pharetra, velit. Odio egestas posuere pellentesque nunc
-                                eget etiam imperdiet blandit fringilla. Nibh dictum eleifend neque eget magna vel. Quis
-                                fusce sed ut ultrices aliquam. Id feugiat molestie cursus vehicula integer. Odio
-                                vehicula tempor, cras pulvinar scelerisque vel neque porta. Imperdiet sit lectus
-                                adipiscing interdum tempor adipiscing senectus ullamcorper non. Pretium convallis tellus
-                                faucibus morbi. Id egestas fringilla dignissim lorem bibendum sapien felis. Massa, felis
-                                fermentum, id proin. Felis in commodo nam commodo volutpat eget feugiat. Fermentum
-                                aliquam at id nisi. Nulla lectus facilisi sem ut. Ut ut sed eget nullam. Porta sit
-                                aenean viverra posuere adipiscing. Vulputate tellus vulputate eget nunc quis habitasse
-                                arcu. Eleifend faucibus at eu fermentum donec velit etiam sit viverra. At quis
-                                consectetur eget nibh id erat urna, etiam. Risus dolor tincidunt et sed faucibus elit
-                                massa neque. Et, mus in id proin blandit sed et. Sit eget pharetra et placerat. Mauris
-                                ut ut arcu ac in enim massa eu semper. Nulla massa donec dignissim eu nisl accumsan.
-                                Nibh venenatis eros, sem mi ac ac morbi in. Semper euismod volutpat parturient
-                                imperdiet. Enim molestie commodo quis eget placerat quisque diam purus. Lorem quis est
-                                porttitor justo. Et mi fames quis at consectetur sollicitudin. Quam turpis felis
-                                vestibulum arcu ullamcorper semper sapien. Aliquam lacus, sem viverra blandit aliquam
-                                dui odio non. Eu in viverra velit sit lacinia. Suspendisse ac, molestie fusce nulla
-                                quisque orci in. Duis sagittis, suspendisse vivamus libero orci sit nulla. Ornare ut
-                                dictumst sit sem.
-                              </p>
-                            </div>
+                            {activeTab == 0 ? (
+                              <div className="details px-3 py-4">
+                                <p className="bold mb-1">Description</p>
+                                <p className="grey-text mb-0">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa, porta auctor
+                                  pretium dictumst non a. Adipiscing tortor ornare facilisis metus quis arcu dictum.
+                                  Pulvinar nec, duis gravida malesuada dis vel eget neque elementum. Varius amet sem sit
+                                  nulla nunc. Nam vel eget sodales tincidunt turpis pharetra volutpat nulla. Vulputate
+                                  malesuada eu tellus gravida varius et nulla tincidunt. Nulla pretium commodo faucibus
+                                  leo sed nibh. Scelerisque scelerisque faucibus urna enim in vel tincidunt tristique
+                                  nunc. Nisl mauris auctor id sagittis aenean vestibulum. Est magnis sit egestas
+                                  elementum lorem id. Vulputate ultricies vulputate sed vel tempor aliquet lacus. Sed
+                                  pulvinar turpis non sollicitudin leo. Vestibulum, bibendum urna viverra proin nibh
+                                  ullamcorper. Elementum amet, ac risus elementum sagittis. Massa arcu cursus nisi nulla
+                                  tincidunt. Phasellus netus egestas dolor, aliquet scelerisque nec. Ullamcorper risus
+                                  sapien, in leo tincidunt sed. Purus imperdiet erat mi pharetra, velit. Odio egestas
+                                  posuere pellentesque nunc eget etiam imperdiet blandit fringilla. Nibh dictum eleifend
+                                  neque eget magna vel. Quis fusce sed ut ultrices aliquam. Id feugiat molestie cursus
+                                  vehicula integer. Odio vehicula tempor, cras pulvinar scelerisque vel neque porta.
+                                  Imperdiet sit lectus adipiscing interdum tempor adipiscing senectus ullamcorper non.
+                                  Pretium convallis tellus faucibus morbi. Id egestas fringilla dignissim lorem bibendum
+                                  sapien felis. Massa, felis fermentum, id proin. Felis in commodo nam commodo volutpat
+                                  eget feugiat. Fermentum aliquam at id nisi. Nulla lectus facilisi sem ut. Ut ut sed
+                                  eget nullam. Porta sit aenean viverra posuere adipiscing. Vulputate tellus vulputate
+                                  eget nunc quis habitasse arcu. Eleifend faucibus at eu fermentum donec velit etiam sit
+                                  viverra. At quis consectetur eget nibh id erat urna, etiam. Risus dolor tincidunt et
+                                  sed faucibus elit massa neque. Et, mus in id proin blandit sed et. Sit eget pharetra
+                                  et placerat. Mauris ut ut arcu ac in enim massa eu semper. Nulla massa donec dignissim
+                                  eu nisl accumsan. Nibh venenatis eros, sem mi ac ac morbi in. Semper euismod volutpat
+                                  parturient imperdiet. Enim molestie commodo quis eget placerat quisque diam purus.
+                                  Lorem quis est porttitor justo. Et mi fames quis at consectetur sollicitudin. Quam
+                                  turpis felis vestibulum arcu ullamcorper semper sapien. Aliquam lacus, sem viverra
+                                  blandit aliquam dui odio non. Eu in viverra velit sit lacinia. Suspendisse ac,
+                                  molestie fusce nulla quisque orci in. Duis sagittis, suspendisse vivamus libero orci
+                                  sit nulla. Ornare ut dictumst sit sem.
+                                </p>
+                              </div>
+                            ) : (
+                              <>
+                                {activeTab == 1 ? (
+                                  <div className="details px-3 py-4">
+                                    <div style={{ width: "100%" }}>
+                                      <iframe
+                                        width="100%"
+                                        height="600"
+                                        frameBorder="0"
+                                        scrolling="no"
+                                        marginHeight={0}
+                                        marginWidth={0}
+                                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                      ></iframe>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <></>
+                                )}
+                              </>
+                            )}
                           </div>
                           <div
                             className="tab-pane fade"
