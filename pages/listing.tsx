@@ -103,7 +103,7 @@ export default () => {
 
                 <div className="col-lg-8 mt-3">
                   {Array.from({ length: 5 }, () => (
-                    <ListingCard />
+                    <ListingCard isUser={true} />
                   ))}
                 </div>
                 <div className="col-lg-4 mt-3">
