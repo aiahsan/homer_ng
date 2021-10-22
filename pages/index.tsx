@@ -2,6 +2,8 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import React from "react";
 import Footer from "../components/footer";
+import {Dropdown} from 'react-bootstrap';
+import Icon from '../components/icon'
 export default function Home(): JSX.Element {
   const [slider, setslider] = React.useState("50");
   const [downpayment, setdownpayment] = React.useState("N 3,000,000");
@@ -204,6 +206,7 @@ export default function Home(): JSX.Element {
                       </div>
                     </div>
                     <p className="p-lg l-blue-text mt-3 mb-1">Length of Loan (Tenor)</p>
+
                     <div className="input-group w-50 input-tagg mb-3">
                       <input
                         type="text"
@@ -219,6 +222,21 @@ export default function Home(): JSX.Element {
                         </span>
                       </div>
                     </div>
+                    <p className="p-lg l-blue-text mt-3 mb-1">Loan Type</p>
+                    <Dropdown className="dpd-cst-home">
+                      <Dropdown.Toggle variant="success" id="dropdown-basic">
+                      <p className="vosdf-d m-0">Private Mortgage Bank</p>
+                      <div className="bd-left vosdf-d">
+                        <Icon name="dpd"/>
+                      </div>
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                     <p className="p-lg l-blue-text mt-3 mb-1">Rate</p>
                     <p className="p-lg mt-1 mb-1">FMBN rate is 6%. PMB rates are between 18 to 24%</p>
                     <div className="input-group w-50 mt-2 input-tagg mb-3">

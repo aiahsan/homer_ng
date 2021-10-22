@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import { Carousel } from "react-responsive-carousel";
+import ListingDetailCard from '../components/listingdetailscard'
+import Icon from '../components/icon'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default () => {
@@ -30,9 +32,12 @@ export default () => {
                 <div className="col-lg-8 mt-3">
                   <div className="listing-inner">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="d-flex align-items-center">
-                        <img src="images/listing-icon.png" alt="" className="img-fluid" />
+                      <div className="">
                         <p className="p-lg mb-0 bold ml-2">Hazara Construction and Builders </p>
+                        <div className="d-flex align-items-center ml-2">
+                          <Icon name="mapl"/>
+                        <p className="p-lg mb-0 ml-2">Ogombo Behind Abraham Adesanya </p>
+                        </div>
                       </div>
                       <i className="far fa-heart p-lg"></i>
                     </div>
@@ -326,7 +331,16 @@ export default () => {
                         </div>
                       </Carousel>
                     </div>
+                    <div className="khcs9er0-d" >
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
+                    <ListingDetailCard src="http://cdn.home-designing.com/wp-content/uploads/2018/09/cool-master-bedrooms.jpg"/>
 
+                    </div>
                     <div className="details p-3">
                       <div className="row text-center">
                         <div className="col-lg-3 py-2 border-right">

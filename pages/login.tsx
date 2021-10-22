@@ -114,7 +114,7 @@ export default () => {
                           Forget your password?
                         </a>
                       </div>
-                      <button className="mt-4 site-btn w-100 py-3">Sign In</button>
+                      <button type="button" onClick={()=> location.href="/user"} className="mt-4 site-btn w-100 py-3">Sign In</button>
                       <p className="mt-3 text-center">
                         Not registered yet?{" "}
                         <a href="signup" className="blue-text">

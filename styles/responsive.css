@@ -3,10 +3,24 @@
     display: inline-table;
   }
   h1 {
-    font-size: 55px;
+    font-size: 55px !important;
+  }
+  .navbar-nav .nav-link{
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 991px) {
+  .sidebar{
+    position: fixed;
+  }
+  div#navbarNav {
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 60px;
+  }
   .nav-log-btn {
     margin-top: 10px;
   }
@@ -24,7 +38,7 @@
     position: static;
   }
   h1 {
-    font-size: 45px;
+    font-size: 45px !important;
   }
   h2 {
     font-size: 32px;
@@ -69,10 +83,17 @@
   .details .border-right {
     border-right: none;
   }
+  .navbar-nav {
+    background: #F3F7FF;
+    position: absolute;
+    z-index: 9;
+    width: 95%;
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 38px;
+    font-size: 38px !important;
   }
   h2 {
     font-size: 28px;
@@ -103,7 +124,7 @@
 }
 @media screen and (max-width: 575px) {
   h1 {
-    font-size: 32px;
+    font-size: 28px !important;
   }
   h2 {
     font-size: 23px;
@@ -127,7 +148,7 @@
   .calculator-inner {
     padding: 35px 20px;
   }
-  .stepper a {
-    /* display: none; */
+  .navbar-nav {
+    width: 92%;
   }
 }

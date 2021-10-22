@@ -2,7 +2,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-export default () => {
+export default ({isUser}) => {
   return (
     <div className="listing-inner mb-4">
       <div className="d-flex align-items-center justify-content-between">
@@ -366,7 +366,7 @@ export default () => {
               <p className="mb-0">Tenor: 5 years</p>
             </div>
           </div>
-          <a href="#_" onClick={() => (location.href = "/detail")} className="site-btn rounded mt-4 px-5 py-2">
+          <a   onClick={() => (location.href ="detail")} className="site-btn rounded mt-4 px-5 py-2">
             Apply For Finance To Buy
           </a>
         </div>
